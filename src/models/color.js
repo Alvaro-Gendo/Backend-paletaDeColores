@@ -16,7 +16,6 @@ const colorSchema = new Schema({
     colorHexa:{
         type: String,
         required: true,
-        unique: true,
     }
 })
 
