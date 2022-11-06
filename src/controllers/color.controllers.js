@@ -39,20 +39,6 @@ export const obtenerColor = async (req, res) => {
   }
 };
 
-export const editarColor = async (req, res) => {
-  try {
-    await Color.findByIdAndUpdate(req.params.id, req.body);
-    res.status(200).json({
-      message: "El color fue editado",
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(404).json({
-      message: "El color no pudo ser editado",
-    });
-  }
-};
-
 export const borrarColor = async (req, res) => {
   try {
     await Color.findByIdAndDelete(req.params.id);
